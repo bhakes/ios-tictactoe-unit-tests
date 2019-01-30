@@ -50,6 +50,7 @@ struct GameBoard {
     }
     
     var isFull: Bool {
+        
         for square in squares {
             if square == .empty {
                 return false
