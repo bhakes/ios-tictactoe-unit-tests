@@ -138,8 +138,8 @@ class GameAITests: XCTestCase {
         try! board.place(mark: .x, on: (1, 1))
         try! board.place(mark: .o, on: (2, 0))
         
-        XCTAssertTrue(game(board: board, isWonBy: .o))
-        XCTAssertFalse(game(board: board, isWonBy: .x))
+        XCTAssertTrue(game(board: board, isWonBy: .x))
+        XCTAssertFalse(game(board: board, isWonBy: .o))
     }
     
 

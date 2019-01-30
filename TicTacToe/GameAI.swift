@@ -41,5 +41,19 @@ func game(board: GameBoard, isWonBy player: GameBoard.Mark) -> Bool {
         }
     }
     
+    // set board coordinate tests for
+    // diagonal TicTacToe
+    let test00 = board[(0,0)] == player,
+        test11 = board[(1,1)] == player,
+        test22 = board[(2,2)] == player,
+        test02 = board[(0,2)] == player,
+        test20 = board[(2,0)] == player
+    
+    
+    if test11 && ((test00 && test22) || (test20 && test02)){
+        return true
+    }
+    
+    
     return false
 }
